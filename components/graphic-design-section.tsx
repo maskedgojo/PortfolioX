@@ -119,11 +119,7 @@ const GraphicDesignSection = () => {
             >
               <div className="pixel-card h-full">
                 <div className="relative h-48 w-full overflow-hidden group mb-4">
-                  <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 opacity-20 pointer-events-none z-10">
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <div key={i} className="border border-game-primary" />
-                    ))}
-                  </div>
+                  {/* Grid overlay removed */}
                   <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <button
@@ -175,22 +171,29 @@ const GraphicDesignSection = () => {
           </button>
         </div>
 
-        {/* Image Modal */}
+        {/* Improved Image Modal */}
         {selectedImage !== null && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-90">
-            <div className="relative w-full max-w-4xl">
-              <button onClick={closeImageModal} className="absolute -top-12 right-0 text-white hover:text-game-primary">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-90" onClick={closeImageModal}>
+            <div className="relative w-full max-w-5xl max-h-screen" onClick={(e) => e.stopPropagation()}>
+              <button 
+                onClick={closeImageModal} 
+                className="absolute -top-12 right-0 text-white hover:text-game-primary p-2 z-20"
+                aria-label="Close modal"
+              >
                 <X className="h-8 w-8" />
               </button>
 
-              <div className="pixel-card overflow-hidden">
-                <Image
-                  src={selectedImage || "/placeholder.svg"}
-                  alt="Project preview"
-                  width={1200}
-                  height={800}
-                  className="object-contain"
-                />
+              <div className="relative w-full h-full max-h-screen flex items-center justify-center">
+                <div className="relative w-full h-auto max-h-[80vh]">
+                  <Image
+                    src={selectedImage || "/placeholder.svg"}
+                    alt="Project preview"
+                    width={1200}
+                    height={800}
+                    className="object-contain w-full h-auto max-h-[80vh]"
+                    style={{ margin: "0 auto" }}
+                  />
+                </div>
               </div>
             </div>
           </div>
