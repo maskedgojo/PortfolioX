@@ -2,12 +2,12 @@ export const categorizedTechStack = {
   FRONTEND: [
     {
       name: "HTML5",
-      icon: "/images/html5.webp",
+      icon: "/images/html5.jpg",
       color: "#E34F26",
     },
     {
       name: "CSS3",
-      icon: "/images/css3.png?height=80&width=80",
+      icon: "/images/css3.jpeg",
       color: "#1572B6",
     },
     {
