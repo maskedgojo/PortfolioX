@@ -9,28 +9,28 @@ const videoProjects = [
     id: 1,
     title: "VALORANT MONTAGE",
     description: "FAST PACED HIGHLIGHT EDIT OF A FPS GAME",
-    thumbnail: "/placeholder.svg?height=600&width=800",
+    thumbnail: "/images/videogallery1.mp4?height=600&width=800",
     videoUrl: "https://youtu.be/s0GqG-bMb0w?si=uOL0hm6wYpQPaIMz",
   },
   {
     id: 2,
     title: "PODCAST ",
     description: "INTERACTIVE PODCAST FOCUSING ON IDEAS AND METHODS TO IMPROVE YOUR ENTREPRENUAL MINDSET",
-    thumbnail: "/placeholder.svg?height=600&width=800",
+    thumbnail: "/images/videogallery2.mp4?height=600&width=800",
     videoUrl: "https://youtu.be/sYucZRuch0M?si=lgAezfhOkGZeHoIm",
   },
   {
     id: 3,
     title: "EVENT BROADCAST",
     description: "BROADCAST VIDEO FOR PROMOTION OF AN OFFLINE EVENT",
-    thumbnail: "/placeholder.svg?height=600&width=800",
+    thumbnail: "/images/videogallery3.mp4?height=600&width=800",
     videoUrl: "https://www.instagram.com/reel/DHv5c65zfbu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     id: 4,
     title: "SMART LIGHT SYSTEM",
     description: "IOT BASED LIGHTING SYSTEM THAT CHANGES BRIGHTNESS ACCORDING TO OBJECT DETECTION",
-    thumbnail: "/placeholder.svg?height=600&width=800",
+    thumbnail: "/images/videogallery4.mp4?height=600&width=800",
     videoUrl: "https://www.github.com/ramanbuchha",
   },
 ]
@@ -90,11 +90,7 @@ const VideoEditingSection = () => {
             >
               <div className="pixel-card h-full">
                 <div className="relative h-48 w-full overflow-hidden group mb-4">
-                  <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 opacity-20 pointer-events-none z-10">
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <div key={i} className="border border-game-primary" />
-                    ))}
-                  </div>
+                  {/* Grid overlay removed */}
                   <Image
                     src={project.thumbnail || "/placeholder.svg"}
                     alt={project.title}
