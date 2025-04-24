@@ -9,7 +9,7 @@ const videoProjects = [
     id: 1,
     title: "VALORANT MONTAGE",
     description: "FAST PACED HIGHLIGHT EDIT OF A FPS GAME",
-    thumbnail: "/images/videogallery1.mp4?height=600&width=800",
+    thumbnail: "/images/videogallery1.mp4",
     videoUrl: "https://youtu.be/s0GqG-bMb0w?si=uOL0hm6wYpQPaIMz",
   },
   {
