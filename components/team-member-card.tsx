@@ -53,11 +53,7 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative h-48 w-full overflow-hidden mb-4">
-        <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 opacity-20 pointer-events-none z-10">
-          {Array.from({ length: 64 }).map((_, i) => (
-            <div key={i} className="border border-game-primary" />
-          ))}
-        </div>
+        {/* Grid overlay removed */}
         <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full p-2">
