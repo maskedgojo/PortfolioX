@@ -75,8 +75,8 @@ export const categorizedTechStack = {
       color: "#FFCA28",
     },
     {
-      name: "Redis",
-      icon: "/images/redis.png",
+      name: "Oracle",
+      icon: "/images/or.png",
       color: "#DC382D",
     },
   ],
