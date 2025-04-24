@@ -10,7 +10,7 @@ const projects = [
     title: "ECOTRAFFIC-AI-DELHI-HACKATHON",
     description:
       "EcoTraffic AI is an AI-powered smart system designed to optimize traffic flow and reduce pollution levels in Delhi through real-time data analysis and adaptive signal control.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/ecotraffic ai delhi hackathon.png?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Ecotraffic-AI---Delhi-Hackthon",
     liveUrl: "v0-delhi-hackthon.vercel.app/",
     tags: ["TYPESCRIPT", "CSS", "JAVASCRIPT"],
@@ -20,7 +20,7 @@ const projects = [
     title: "PACMAN",
     description:
       "A classic arcade-style Pacman Game where players navigate mazes, eat pellets, and evade ghosts for high scores and endless fun.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/pacman.png?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Pacman",
     tags: ["JAVA"],
   },
@@ -29,7 +29,7 @@ const projects = [
     title: "MOVIE-RECOMMENDER-SYSTEM",
     description:
       "An intelligent Movie Recommender System that suggests personalized films using machine learning and vectorization based on user preferences.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/movie recommender preview.png?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/MOVIE-RECOMMENDER-SYSTEM",
     tags: ["PYTHON"],
   },
@@ -38,7 +38,7 @@ const projects = [
     title: "MEMORY CARD GAME",
     description:
       "A fun and interactive Memory Card Game where players match pairs of cards using concentration and visual recall skills.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/memory game.png?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Memory-cards-game",
     tags: ["JAVA"],
   },
@@ -47,7 +47,7 @@ const projects = [
     title: "CALCULATOR",
     description:
       "A simple and efficient Calculator app for performing basic arithmetic operations with a clean and user-friendly interface.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/calculator.png?height=600&width=800",
     githubUrl: "https://github.com/ANMOLJENA/calculator-project",
     tags: ["CSS", "JAVASCRIPT", "HTML"],
   },
@@ -56,7 +56,7 @@ const projects = [
     title: "NETFLIX CLONE",
     description:
       "A static Netflix Clone built with only HTML and CSS, replicating the visual layout and design of the original platform.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/netflix clone.png?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Netflix-Clone",
     tags: ["HTML", "CSS"],
   },
@@ -121,11 +121,7 @@ const ProjectsSection = () => {
             >
               <div className="pixel-card h-full">
                 <div className="relative h-48 w-full overflow-hidden mb-4">
-                  <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 opacity-20 pointer-events-none z-10">
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <div key={i} className="border border-game-primary" />
-                    ))}
-                  </div>
+                  {/* Grid overlay removed */}
                   <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
                 </div>
 
