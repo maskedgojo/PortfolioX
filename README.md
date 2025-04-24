@@ -69,7 +69,7 @@ We chose the **8-bit retro gaming aesthetic** to reflect our shared love for cre
 ## 🖼️ Assets and Attributions
 Tech Stack Icons & Graphics: All icons and images used (such as logos of React, TypeScript, etc.) are sourced from Google Images and used only for educational and illustrative purposes.
 
---If you are the rightful owner of any asset and wish to receive credit or request removal, please contact us.
+- If you are the rightful owner of any asset and wish to receive credit or request removal, please contact us.
 
 ## 📬 Contact Us
 We’re always open to feedback, collaborations, or just friendly chats. Reach out through our contact form on the website, or connect with us via LinkedIn or GitHub.
