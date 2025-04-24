@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Play, X } from "lucide-react"
+import { Play, X, ExternalLink } from "lucide-react"
 
 const videoProjects = [
   {
@@ -42,6 +42,7 @@ const videoProjects = [
 const VideoEditingSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<number | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [playingVideos, setPlayingVideos] = useState<number[]>([])
   const sectionRef = useRef<HTMLElement>(null)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
@@ -80,22 +81,40 @@ const VideoEditingSection = () => {
     if (video) {
       if (isEntering) {
         video.play().catch(err => console.log("Video play failed:", err))
-      } else {
+        setPlayingVideos(prev => [...prev, index])
+      } else if (!playingVideos.includes(index)) {
         video.pause()
         video.currentTime = 0
       }
     }
   }
 
-  const getSelectedProject = () => {
-    return selectedVideo !== null ? videoProjects.find(p => p.id === selectedVideo) : null
+  const togglePlayingVideo = (index: number) => {
+    const isPlaying = playingVideos.includes(index)
+    const video = videoRefs.current[index]
+    
+    if (isPlaying) {
+      // Remove from playing videos
+      setPlayingVideos(prev => prev.filter(i => i !== index))
+      if (video) {
+        video.pause()
+        video.currentTime = 0
+      }
+    } else {
+      // Add to playing videos
+      setPlayingVideos(prev => [...prev, index])
+      if (video) {
+        video.play().catch(err => console.log("Video play failed:", err))
+      }
+    }
   }
 
-  const openExternalUrl = () => {
-    const project = getSelectedProject()
-    if (project && project.videoUrl) {
-      window.open(project.videoUrl, '_blank')
-    }
+  const openExternalUrl = (url: string) => {
+    window.open(url, '_blank')
+  }
+
+  const getSelectedProject = () => {
+    return selectedVideo !== null ? videoProjects.find(p => p.id === selectedVideo) : null
   }
 
   const renderVideoContent = () => {
@@ -117,7 +136,7 @@ const VideoEditingSection = () => {
       return (
         <div className="flex flex-col items-center justify-center h-full p-4">
           <p className="text-sm mb-4">This video can't be embedded directly.</p>
-          <button onClick={openExternalUrl} className="pixel-btn">
+          <button onClick={() => openExternalUrl(project.videoUrl)} className="pixel-btn">
             OPEN ORIGINAL VIDEO
           </button>
         </div>
@@ -159,21 +178,40 @@ const VideoEditingSection = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button
-                      onClick={() => openVideoModal(project.id)}
-                      className="bg-game-primary p-3 border-2 border-black"
-                    >
-                      <Play className="h-6 w-6 text-black" />
-                    </button>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => openVideoModal(project.id)}
+                        className="bg-game-primary p-3 border-2 border-black"
+                        title="Watch Video"
+                      >
+                        <Play className="h-6 w-6 text-black" />
+                      </button>
+                      <button
+                        onClick={() => togglePlayingVideo(index)}
+                        className={`p-3 border-2 border-black ${playingVideos.includes(index) ? "bg-red-500" : "bg-green-500"}`}
+                        title={playingVideos.includes(index) ? "Stop Thumbnail" : "Play Thumbnail"}
+                      >
+                        {playingVideos.includes(index) ? "■" : "▶"}
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <h3 className="text-sm font-bold mb-2 neon-text">{project.title}</h3>
                 <p className="text-xs mb-4">{project.description}</p>
 
-                <button onClick={() => openVideoModal(project.id)} className="pixel-btn w-full">
-                  WATCH VIDEO
-                </button>
+                <div className="flex gap-2">
+                  <button onClick={() => openVideoModal(project.id)} className="pixel-btn flex-1">
+                    WATCH VIDEO
+                  </button>
+                  <button 
+                    onClick={() => openExternalUrl(project.videoUrl)} 
+                    className="pixel-btn bg-green-700 flex items-center justify-center p-2"
+                    title="Open Original Link"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
