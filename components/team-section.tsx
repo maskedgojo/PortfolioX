@@ -8,7 +8,7 @@ const teamMembers = [
     id: 1,
     name: "ANMOL",
     role: "FULL STACK DEV",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/PortfolioX-main/public/images/anmol.jpg?height=400&width=400",
     bio: "PASSIONATE ABOUT CREATING SEAMLESS USER EXPERIENCES WITH MODERN WEB TECHNOLOGIES.",
     stats: {
       strength: 85,
@@ -25,7 +25,7 @@ const teamMembers = [
     id: 2,
     name: "SHWATI",
     role: "UI/UX DESIGNER",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/PortfolioX-main/public/images/shwati.png?height=400&width=400",
     bio: "CRAFTING BEAUTIFUL AND INTUITIVE INTERFACES THAT BRIDGE THE GAP BETWEEN USERS AND TECHNOLOGY.",
     stats: {
       strength: 70,
@@ -42,7 +42,7 @@ const teamMembers = [
     id: 3,
     name: "RAMAN",
     role: "BACKEND DEV",
-    image: "/images/raman.jpg?height=400&width=400",
+    image: "/PortfolioX-main/public/images/raman.jpg?height=400&width=400",
     bio: "BUILDING ROBUST AND SCALABLE SERVER-SIDE SOLUTIONS TO POWER MODERN APPLICATIONS.",
     stats: {
       strength: 90,
@@ -52,14 +52,14 @@ const teamMembers = [
     },
     socials: [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/ramanbuchha/" },
-      { platform: "GitHub", url: "https://github.com" },
+      { platform: "GitHub", url: "https://github.com/ramanbuchha" },
     ],
   },
   {
     id: 4,
     name: "KUSHAAGRA",
     role: "AI/ML DEV",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/PortfolioX-main/public/images/kushaagra.jpg?height=400&width=400",
     bio: "BUILDING INTELLIGENT AND EFFICIENT AI/ML SOLUTIONS WITH A FOCUS ON INNOVATION, SCALABILITY, AND REAL-WORLD IMPACT.",
     stats: {
       strength: 75,
@@ -134,3 +134,4 @@ const TeamSection = () => {
 }
 
 export default TeamSection
+
