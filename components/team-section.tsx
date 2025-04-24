@@ -54,6 +54,7 @@ const teamMembers = [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/ramanbuchha/" },
       { platform: "GitHub", url: "https://github.com/ramanbuchha" },
     ],
+    zoomedOut: true, // Added property to identify Raman's card
   },
   {
     id: 4,
@@ -118,7 +119,11 @@ const TeamSection = () => {
               className={`${isVisible ? "pixel-fade-in" : "opacity-0"}`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <TeamMemberCard member={member} />
+              {/* Pass zoomedOut property to TeamMemberCard */}
+              <TeamMemberCard 
+                member={member} 
+                zoomedOut={member.zoomedOut} 
+              />
             </div>
           ))}
         </div>
