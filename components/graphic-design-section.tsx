@@ -30,14 +30,14 @@ const designProjects = [
     id: 4,
     title: "POSTER DESIGN",
     description: "DESIGNING ENERGETIC AND INSPIRATIONAL POSTERS HIGHLIGHTING THE LEGACY OF STEPHEN CURRY.",
-    image: "/images/graphicdesign1.jpg",
+    image: "/images/graphicdesign1.png",
     category: "PRINT",
   },
   {
     id: 5,
     title: "ILLUSTRATION",
     description: "CREATING CUSTOM DIGITAL ILLUSTRATIONS TO CELEBRATE GANESH CHATURTHI, A JOYOUS INDIAN FESTIVAL.",
-    image: "/images/graphicdesign2.jpg",
+    image: "/images/graphicdesign2.png",
     category: "ILLUSTRATION",
   },
   {
