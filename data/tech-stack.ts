@@ -33,8 +33,8 @@ export const categorizedTechStack = {
       color: "#339933",
     },
     {
-      name: "Express.js",
-      icon: "/images/ex.jpg",
+      name: "Flask",
+      icon: "/images/flask.png",
       color: "#000000",
     },
     {
