@@ -34,7 +34,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Raman participated in a hackathon where he developed a dashboard to address a business-related problem statement, showcasing his data-driven problem-solving skills.",
     side: "left",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/fed?height=300&width=400",
   },
   {
     year: "2025",
@@ -58,7 +58,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "The team actively participated in a food drive for animals, contributing to the welfare and care of stray and shelter animals.",
     side: "right",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/kaews?height=300&width=400",
   },
 ]
 
