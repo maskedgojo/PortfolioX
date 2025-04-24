@@ -69,25 +69,25 @@ const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
         <div className="mb-4">
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div>
-              <div className="mb-1">STR</div>
+              <div className="mb-1">REACT</div>
               <div className="w-full h-3 bg-black border border-white">
                 <div className="h-full bg-game-primary" style={{ width: `${member.stats.strength}%` }}></div>
               </div>
             </div>
             <div>
-              <div className="mb-1">INT</div>
+              <div className="mb-1">JAVA</div>
               <div className="w-full h-3 bg-black border border-white">
                 <div className="h-full bg-game-secondary" style={{ width: `${member.stats.intelligence}%` }}></div>
               </div>
             </div>
             <div>
-              <div className="mb-1">SPD</div>
+              <div className="mb-1">C/C++</div>
               <div className="w-full h-3 bg-black border border-white">
                 <div className="h-full bg-game-accent" style={{ width: `${member.stats.speed}%` }}></div>
               </div>
             </div>
             <div>
-              <div className="mb-1">CRT</div>
+              <div className="mb-1">PYTHON</div>
               <div className="w-full h-3 bg-black border border-white">
                 <div className="h-full bg-game-primary" style={{ width: `${member.stats.creativity}%` }}></div>
               </div>
