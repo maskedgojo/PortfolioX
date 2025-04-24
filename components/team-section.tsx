@@ -8,7 +8,7 @@ const teamMembers = [
     id: 1,
     name: "ANMOL",
     role: "FULL STACK DEV",
-    image: "/images/anmol.jpg?height=400&width=400",
+    image: "/images/anmol.jpg",
     bio: "PASSIONATE ABOUT CREATING SEAMLESS USER EXPERIENCES WITH MODERN WEB TECHNOLOGIES.",
     stats: {
       strength: 85,
