@@ -42,7 +42,7 @@ const teamMembers = [
     id: 3,
     name: "RAMAN",
     role: "BACKEND DEV",
-    image: "/images/raman.jpg?height=400&width=400",
+    image: "/images/raman.jpg",
     bio: "BUILDING ROBUST AND SCALABLE SERVER-SIDE SOLUTIONS TO POWER MODERN APPLICATIONS.",
     stats: {
       strength: 90,
