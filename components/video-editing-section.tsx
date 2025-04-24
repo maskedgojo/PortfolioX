@@ -10,6 +10,7 @@ const videoProjects = [
     description: "FAST PACED HIGHLIGHT EDIT OF A FPS GAME",
     thumbnail: "/images/videogallery1.mp4",
     videoUrl: "https://youtu.be/s0GqG-bMb0w?si=uOL0hm6wYpQPaIMz",
+    embedUrl: "https://www.youtube.com/embed/s0GqG-bMb0w?si=uOL0hm6wYpQPaIMz",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const videoProjects = [
     description: "INTERACTIVE PODCAST FOCUSING ON IDEAS AND METHODS TO IMPROVE YOUR ENTREPRENUAL MINDSET",
     thumbnail: "/images/videogallery2.mp4",
     videoUrl: "https://youtu.be/sYucZRuch0M?si=lgAezfhOkGZeHoIm",
+    embedUrl: "https://www.youtube.com/embed/sYucZRuch0M?si=lgAezfhOkGZeHoIm",
   },
   {
     id: 3,
@@ -24,6 +26,8 @@ const videoProjects = [
     description: "BROADCAST VIDEO FOR PROMOTION OF AN OFFLINE EVENT",
     thumbnail: "/images/videogallery3.mp4",
     videoUrl: "https://www.instagram.com/reel/DHv5c65zfbu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    // Instagram doesn't support direct embedding, so we'll handle this specially
+    embedUrl: "",
   },
   {
     id: 4,
@@ -31,6 +35,7 @@ const videoProjects = [
     description: "IOT BASED LIGHTING SYSTEM THAT CHANGES BRIGHTNESS ACCORDING TO OBJECT DETECTION",
     thumbnail: "/images/videogallery4.mp4",
     videoUrl: "https://www.github.com/ramanbuchha",
+    embedUrl: "",
   },
 ]
 
@@ -82,6 +87,44 @@ const VideoEditingSection = () => {
     }
   }
 
+  const getSelectedProject = () => {
+    return selectedVideo !== null ? videoProjects.find(p => p.id === selectedVideo) : null
+  }
+
+  const openExternalUrl = () => {
+    const project = getSelectedProject()
+    if (project && project.videoUrl) {
+      window.open(project.videoUrl, '_blank')
+    }
+  }
+
+  const renderVideoContent = () => {
+    const project = getSelectedProject()
+    if (!project) return null
+
+    if (project.embedUrl) {
+      return (
+        <iframe
+          src={project.embedUrl}
+          className="w-full h-full"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )
+    } else {
+      // For videos that can't be embedded (Instagram, GitHub)
+      return (
+        <div className="flex flex-col items-center justify-center h-full p-4">
+          <p className="text-sm mb-4">This video can't be embedded directly.</p>
+          <button onClick={openExternalUrl} className="pixel-btn">
+            OPEN ORIGINAL VIDEO
+          </button>
+        </div>
+      )
+    }
+  }
+
   return (
     <section id="video-editing" ref={sectionRef} className="py-20 relative overflow-hidden bg-game-bg">
       <div className="container mx-auto px-4">
@@ -106,7 +149,7 @@ const VideoEditingSection = () => {
                   onMouseEnter={() => handleVideoHover(index, true)}
                   onMouseLeave={() => handleVideoHover(index, false)}
                 >
-                  {/* Video element instead of Image */}
+                  {/* Video element for the thumbnail */}
                   <video
                     ref={el => videoRefs.current[index] = el}
                     src={project.thumbnail}
@@ -145,14 +188,18 @@ const VideoEditingSection = () => {
               </button>
 
               <div className="pixel-card aspect-video bg-black overflow-hidden">
-                {selectedVideo && (
-                  <video
-                    src={videoProjects.find(p => p.id === selectedVideo)?.thumbnail}
-                    className="w-full h-full object-cover"
-                    controls
-                    autoPlay
-                  />
-                )}
+                {renderVideoContent()}
+              </div>
+              
+              <div className="mt-4 flex justify-center">
+                <a 
+                  href={getSelectedProject()?.videoUrl || "#"} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="pixel-btn"
+                >
+                  OPEN ORIGINAL LINK
+                </a>
               </div>
             </div>
           </div>
