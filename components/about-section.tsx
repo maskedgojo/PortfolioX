@@ -118,7 +118,7 @@ const AboutSection = () => {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=800&width=1200"
+                  src="/images/team.jpg?height=800&width=1200"
                   alt="Team Photo"
                   width={600}
                   height={400}
