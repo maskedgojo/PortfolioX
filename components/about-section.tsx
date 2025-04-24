@@ -18,7 +18,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Anmol clinched victory for KIIT in the inter-college basketball tournament with an outstanding performance.",
     side: "left",
-    image: "/images/basketball?height=300&width=400",
+    image: "/images/basketball",
   },
   {
     year: "2024",
