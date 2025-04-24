@@ -1,0 +1,39 @@
+/* Font loading styles */
+.font-loaded {
+  visibility: visible;
+}
+
+html:not(.font-loaded) {
+  visibility: hidden;
+}
+
+html:not(.font-ready) * {
+  transition: none !important;
+}
+
+/* Fallback to ensure content is visible even if font fails to load */
+@keyframes showContent {
+  to {
+    visibility: visible;
+  }
+}
+
+html {
+  animation: showContent 0s 2s forwards;
+}
+
+/* Font transition helpers */
+.font-transition {
+  transition: font-family 0.3s ease;
+}
+
+/* Specific font classes */
+.retro-heading {
+  font-family: var(--font-pixel), monospace;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.modern-text {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}

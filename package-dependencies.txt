@@ -1,0 +1,4 @@
+// Add these to your package.json dependencies:
+// "gsap": "^3.12.5",
+// "pixi.js": "^7.4.0",
+// "@pixi/react": "^7.1.1"
