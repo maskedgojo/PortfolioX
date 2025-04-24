@@ -27,6 +27,13 @@ const timelineEvents: TimelineEvent[] = [
     image: "/placeholder.svg?height=300&width=400",
   },
   {
+    year: "2024",
+    title: "FED HACKATHON",
+    description: "Raman participated in a hackathon where he developed a dashboard to address a business-related problem statement, showcasing his data-driven problem-solving skills.",
+    side: "left",
+    image: "/placeholder.svg?height=300&width=400",
+  },
+  {
     year: "2025",
     title: "HACKATHON RELATED TO DIABETIC PREDICTION",
     description: "Kushaagra explored diabetes prediction using Near-Infrared (NIR) technology at Ideathon, contributing to innovative healthcare solutions.",
@@ -45,13 +52,6 @@ const timelineEvents: TimelineEvent[] = [
     title: "SOCIAL SERVICE",
     description: "The team actively participated in a food drive for animals, contributing to the welfare and care of stray and shelter animals.",
     side: "left",
-    image: "/placeholder.svg?height=300&width=400",
-  },
-  {
-    year: "2023",
-    title: "NEW HORIZONS",
-    description: "EXPLORING CUTTING-EDGE TECHNOLOGIES LIKE AI, AR/VR, AND BLOCKCHAIN.",
-    side: "right",
     image: "/placeholder.svg?height=300&width=400",
   },
 ]
