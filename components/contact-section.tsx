@@ -22,7 +22,6 @@ const ContactSection = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [submitError, setSubmitError] = useState("")
   const [isVisible, setIsVisible] = useState(false)
 
   // Animation states
@@ -153,44 +152,27 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitError("")
 
     if (!validate()) return
 
     setIsSubmitting(true)
 
-    try {
-      // Send data to PHP backend
-      const response = await fetch("http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=portfolio_x&table=cform/contact-submit.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500))
 
-      const result = await response.json()
+    console.log("Form submitted:", formData)
+    setIsSubmitting(false)
+    setIsSuccess(true)
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      purpose: "",
+      message: "",
+    })
 
-      if (result.success) {
-        setIsSuccess(true)
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          purpose: "",
-          message: "",
-        })
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000)
-      } else {
-        setSubmitError(result.error || "Failed to submit form. Please try again.")
-      }
-    } catch (error) {
-      console.error("Form submission error:", error)
-      setSubmitError("Network error. Please check your connection and try again.")
-    } finally {
-      setIsSubmitting(false)
-    }
+    // Reset success message after 5 seconds
+    setTimeout(() => setIsSuccess(false), 5000)
   }
 
   // Function to handle fire interaction
@@ -314,12 +296,6 @@ const ContactSection = () => {
                       )}
                     </button>
                   </div>
-
-                  {submitError && (
-                    <div className="p-4 border-2 border-game-primary bg-game-primary/20 text-game-primary text-center text-xs">
-                      {submitError}
-                    </div>
-                  )}
 
                   {isSuccess && (
                     <div className="p-4 border-2 border-game-secondary bg-game-secondary/20 text-game-secondary text-center text-xs">
@@ -496,7 +472,7 @@ const ContactSection = () => {
               </div>
 
               {/* Help text for interaction */}
-              <p className="absolute bottom-4 left-0 right-0 text-center text-white text-xs animate-pulse">CLICK THE FIRE</p>
+              <p className="bottom-4 left-0 right-0 text-center text-white text-xs animate-pulse">CLICK THE FIRE</p>
 
               {/* Castle silhouette in background */}
               <div className="absolute bottom-[42%] left-[10%] h-[80px] w-[60px] bg-[#0a0028]">
@@ -560,3 +536,4 @@ const ContactSection = () => {
 }
 
 export default ContactSection
+
