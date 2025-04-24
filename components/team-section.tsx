@@ -59,7 +59,7 @@ const teamMembers = [
     id: 4,
     name: "KUSHAAGRA",
     role: "AI/ML DEV",
-    image: "/images/kushaagra.jpg?height=400&width=400",
+    image: "/images/kushaagra.jpg",
     bio: "BUILDING INTELLIGENT AND EFFICIENT AI/ML SOLUTIONS WITH A FOCUS ON INNOVATION, SCALABILITY, AND REAL-WORLD IMPACT.",
     stats: {
       strength: 75,
