@@ -67,9 +67,7 @@ const Hero = () => {
         </div>
 
         <p className="hero-subtitle mb-8 max-w-3xl mx-auto text-xs sm:text-sm">
-          JUST LIKE EVERY GREAT CO-OP GAME, WE'RE BETTER TOGETHER. FROM PIXELS TO PROJECTS, OUR TEAM BLENDS CREATIVITY,
-          CODE, AND CHAOS TO CRAFT MEMORABLE DIGITAL EXPERIENCES. SCROLL ON TO MEET THE SQUAD, EXPLORE OUR JOURNEY, AND
-          DIVE INTO THE ADVENTURES WE'VE CREATED—TOGETHER. GAME ON.
+          A CO-OP OF CODE, CHAOS, AND PIXELS. DIVE IN, MEET THE SQUAD, AND UNCOVER THE GAME WE’VE BEEN CRAFTING. GAME ON. 🎮
         </p>
 
         <div className={`${isTypingComplete ? "pixel-fade-in" : "opacity-0"}`}>
