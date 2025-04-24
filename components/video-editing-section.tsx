@@ -7,31 +7,31 @@ import Image from "next/image"
 const videoProjects = [
   {
     id: 1,
-    title: "CORPORATE PROMO",
-    description: "A SLEEK CORPORATE PROMOTIONAL VIDEO SHOWCASING COMPANY CULTURE AND VALUES.",
+    title: "VALORANT MONTAGE",
+    description: "FAST PACED HIGHLIGHT EDIT OF A FPS GAME",
     thumbnail: "/placeholder.svg?height=600&width=800",
-    videoUrl: "https://www.example.com/video1",
+    videoUrl: "https://youtu.be/s0GqG-bMb0w?si=uOL0hm6wYpQPaIMz",
   },
   {
     id: 2,
-    title: "PRODUCT LAUNCH",
-    description: "DYNAMIC PRODUCT LAUNCH VIDEO WITH MOTION GRAPHICS AND VISUAL EFFECTS.",
+    title: "PODCAST ",
+    description: "INTERACTIVE PODCAST FOCUSING ON IDEAS AND METHODS TO IMPROVE YOUR ENTREPRENUAL MINDSET",
     thumbnail: "/placeholder.svg?height=600&width=800",
-    videoUrl: "https://www.example.com/video2",
+    videoUrl: "https://youtu.be/sYucZRuch0M?si=lgAezfhOkGZeHoIm",
   },
   {
     id: 3,
-    title: "EVENT HIGHLIGHTS",
-    description: "CINEMATIC HIGHLIGHTS FROM A TECH CONFERENCE WITH INTERVIEWS AND KEY MOMENTS.",
+    title: "EVENT BROADCAST",
+    description: "BROADCAST VIDEO FOR PROMOTION OF AN OFFLINE EVENT",
     thumbnail: "/placeholder.svg?height=600&width=800",
-    videoUrl: "https://www.example.com/video3",
+    videoUrl: "https://www.instagram.com/reel/DHv5c65zfbu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     id: 4,
-    title: "TUTORIAL SERIES",
-    description: "EDUCATIONAL TUTORIAL SERIES WITH ANIMATED EXPLANATIONS AND STEP-BY-STEP GUIDES.",
+    title: "SMART LIGHT SYSTEM",
+    description: "IOT BASED LIGHTING SYSTEM THAT CHANGES BRIGHTNESS ACCORDING TO OBJECT DETECTION",
     thumbnail: "/placeholder.svg?height=600&width=800",
-    videoUrl: "https://www.example.com/video4",
+    videoUrl: "https://www.github.com/ramanbuchha",
   },
 ]
 

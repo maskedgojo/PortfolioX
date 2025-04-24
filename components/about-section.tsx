@@ -15,43 +15,49 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2024",
     title: "BASKETBALL GAME",
-    description: "Anmol clinched victory for KIIT in the inter-college basketball tournament with an outstanding performance.",
+    description:
+      "Anmol clinched victory for KIIT in the inter-college basketball tournament with an outstanding performance.",
     side: "left",
     image: "/placeholder.svg?height=300&width=400",
   },
   {
     year: "2024",
     title: "MUN",
-    description: "Kushaagra participated in the Model United Nations, gaining valuable experience in diplomacy, public speaking, and global affairs.",
+    description:
+      "Kushaagra participated in the Model United Nations, gaining valuable experience in diplomacy, public speaking, and global affairs.",
     side: "right",
     image: "/placeholder.svg?height=300&width=400",
   },
   {
     year: "2024",
     title: "FED HACKATHON",
-    description: "Raman participated in a hackathon where he developed a dashboard to address a business-related problem statement, showcasing his data-driven problem-solving skills.",
+    description:
+      "Raman participated in a hackathon where he developed a dashboard to address a business-related problem statement, showcasing his data-driven problem-solving skills.",
     side: "left",
     image: "/placeholder.svg?height=300&width=400",
   },
   {
     year: "2025",
     title: "HACKATHON RELATED TO DIABETIC PREDICTION",
-    description: "Kushaagra explored diabetes prediction using Near-Infrared (NIR) technology at Ideathon, contributing to innovative healthcare solutions.",
-    side: "left",
-    image: "/placeholder.svg?height=300&width=400",
-  },
-  {
-    year: "2025",
-    title: "DELHI HACKATHON",
-    description: "Kushaagra qualified among the top 8 teams out of 700+ at the IIT Delhi Energy Hackathon, developing an AI-driven solution to tackle air pollution in Delhi-NCR..",
+    description:
+      "Kushaagra explored diabetes prediction using Near-Infrared (NIR) technology at Ideathon, contributing to innovative healthcare solutions.",
     side: "right",
     image: "/placeholder.svg?height=300&width=400",
   },
   {
     year: "2025",
-    title: "SOCIAL SERVICE",
-    description: "The team actively participated in a food drive for animals, contributing to the welfare and care of stray and shelter animals.",
+    title: "DELHI HACKATHON",
+    description:
+      "Kushaagra qualified among the top 8 teams out of 700+ at the IIT Delhi Energy Hackathon, developing an AI-driven solution to tackle air pollution in Delhi-NCR..",
     side: "left",
+    image: "/placeholder.svg?height=300&width=400",
+  },
+  {
+    year: "2025",
+    title: "SOCIAL SERVICE",
+    description:
+      "The team actively participated in a food drive for animals, contributing to the welfare and care of stray and shelter animals.",
+    side: "right",
     image: "/placeholder.svg?height=300&width=400",
   },
 ]

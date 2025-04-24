@@ -3,7 +3,7 @@
 import type React from "react"
 
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Instagram, Youtube, Mail, Phone } from "lucide-react"
+import { Github, Linkedin, Youtube, Mail } from "lucide-react"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -20,11 +20,13 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com", label: "Instagram" },
-    { icon: <Youtube className="h-5 w-5" />, href: "https://youtube.com", label: "YouTube" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/maskedgojo", label: "GitHub" },
+    {
+      icon: <Linkedin className="h-5 w-5" />,
+      href: "https://www.linkedin.com/in/kushaagra-singh-1ba142282/",
+      label: "LinkedIn",
+    },
+    { icon: <Youtube className="h-5 w-5" />, href: "https://www.youtube.com/@TGKBPlayz/videos", label: "YouTube" },
   ]
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -101,16 +103,7 @@ const Footer = () => {
                   href="mailto:contact@teamportfolio.com"
                   className="text-game-text/70 hover:text-game-primary transition-colors duration-300"
                 >
-                  CONTACT@TEAMPORTFOLIO.COM
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-game-primary" />
-                <a
-                  href="tel:+1234567890"
-                  className="text-game-text/70 hover:text-game-primary transition-colors duration-300"
-                >
-                  +123 456 7890
+                  maskedgojo2004@gmail.com
                 </a>
               </li>
             </ul>

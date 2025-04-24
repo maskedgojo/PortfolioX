@@ -6,7 +6,7 @@ import TeamMemberCard from "./team-member-card"
 const teamMembers = [
   {
     id: 1,
-    name: "SACHIN",
+    name: "ANMOL",
     role: "FULL STACK DEV",
     image: "/placeholder.svg?height=400&width=400",
     bio: "PASSIONATE ABOUT CREATING SEAMLESS USER EXPERIENCES WITH MODERN WEB TECHNOLOGIES.",
@@ -17,14 +17,13 @@ const teamMembers = [
       creativity: 80,
     },
     socials: [
-      { platform: "LinkedIn", url: "https://linkedin.com" },
-      { platform: "GitHub", url: "https://github.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/anmol-jena89/" },
+      { platform: "GitHub", url: "https://github.com/ANMOLJENA" },
     ],
   },
   {
     id: 2,
-    name: "RAVI",
+    name: "SHWATI",
     role: "UI/UX DESIGNER",
     image: "/placeholder.svg?height=400&width=400",
     bio: "CRAFTING BEAUTIFUL AND INTUITIVE INTERFACES THAT BRIDGE THE GAP BETWEEN USERS AND TECHNOLOGY.",
@@ -35,14 +34,13 @@ const teamMembers = [
       creativity: 95,
     },
     socials: [
-      { platform: "LinkedIn", url: "https://linkedin.com" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/shwati-khilar-019476344/" },
       { platform: "GitHub", url: "https://github.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
     ],
   },
   {
     id: 3,
-    name: "AYUSH",
+    name: "RAMAN",
     role: "BACKEND DEV",
     image: "/placeholder.svg?height=400&width=400",
     bio: "BUILDING ROBUST AND SCALABLE SERVER-SIDE SOLUTIONS TO POWER MODERN APPLICATIONS.",
@@ -53,17 +51,16 @@ const teamMembers = [
       creativity: 75,
     },
     socials: [
-      { platform: "LinkedIn", url: "https://linkedin.com" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/ramanbuchha/" },
       { platform: "GitHub", url: "https://github.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
     ],
   },
   {
     id: 4,
-    name: "NEHA",
-    role: "FRONTEND DEV",
+    name: "KUSHAAGRA",
+    role: "AI/ML DEV",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "TRANSFORMING DESIGNS INTO RESPONSIVE AND INTERACTIVE WEB EXPERIENCES WITH ATTENTION TO DETAIL.",
+    bio: "BUILDING INTELLIGENT AND EFFICIENT AI/ML SOLUTIONS WITH A FOCUS ON INNOVATION, SCALABILITY, AND REAL-WORLD IMPACT.",
     stats: {
       strength: 75,
       intelligence: 80,
@@ -71,9 +68,8 @@ const teamMembers = [
       creativity: 90,
     },
     socials: [
-      { platform: "LinkedIn", url: "https://linkedin.com" },
-      { platform: "GitHub", url: "https://github.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/kushaagra-singh-1ba142282/" },
+      { platform: "GitHub", url: "https://github.com/maskedgojo/maskedgojo" },
     ],
   },
 ]

@@ -1,14 +1,15 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
+import { Github, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const projects = [
   {
     id: 1,
     title: "ECOTRAFFIC-AI-DELHI-HACKATHON",
-    description: "EcoTraffic AI is an AI-powered smart system designed to optimize traffic flow and reduce pollution levels in Delhi through real-time data analysis and adaptive signal control.",
+    description:
+      "EcoTraffic AI is an AI-powered smart system designed to optimize traffic flow and reduce pollution levels in Delhi through real-time data analysis and adaptive signal control.",
     image: "/placeholder.svg?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Ecotraffic-AI---Delhi-Hackthon",
     liveUrl: "v0-delhi-hackthon.vercel.app/",
@@ -17,7 +18,8 @@ const projects = [
   {
     id: 2,
     title: "PACMAN",
-    description: "A classic arcade-style Pacman Game where players navigate mazes, eat pellets, and evade ghosts for high scores and endless fun.",
+    description:
+      "A classic arcade-style Pacman Game where players navigate mazes, eat pellets, and evade ghosts for high scores and endless fun.",
     image: "/placeholder.svg?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Pacman",
     tags: ["JAVA"],
@@ -25,7 +27,8 @@ const projects = [
   {
     id: 3,
     title: "MOVIE-RECOMMENDER-SYSTEM",
-    description: "An intelligent Movie Recommender System that suggests personalized films using machine learning and vectorization based on user preferences.",
+    description:
+      "An intelligent Movie Recommender System that suggests personalized films using machine learning and vectorization based on user preferences.",
     image: "/placeholder.svg?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/MOVIE-RECOMMENDER-SYSTEM",
     tags: ["PYTHON"],
@@ -33,7 +36,8 @@ const projects = [
   {
     id: 4,
     title: "MEMORY CARD GAME",
-    description: "A fun and interactive Memory Card Game where players match pairs of cards using concentration and visual recall skills.",
+    description:
+      "A fun and interactive Memory Card Game where players match pairs of cards using concentration and visual recall skills.",
     image: "/placeholder.svg?height=600&width=800",
     githubUrl: "https://github.com/maskedgojo/Memory-cards-game",
     tags: ["JAVA"],
@@ -41,7 +45,8 @@ const projects = [
   {
     id: 5,
     title: "CALCULATOR",
-    description: "A simple and efficient Calculator app for performing basic arithmetic operations with a clean and user-friendly interface.",
+    description:
+      "A simple and efficient Calculator app for performing basic arithmetic operations with a clean and user-friendly interface.",
     image: "/placeholder.svg?height=600&width=800",
     githubUrl: "https://github.com/ANMOLJENA/calculator-project",
     tags: ["CSS", "JAVASCRIPT", "HTML"],

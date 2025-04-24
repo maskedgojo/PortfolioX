@@ -7,45 +7,46 @@ import Image from "next/image"
 const designProjects = [
   {
     id: 1,
-    title: "BRAND IDENTITY",
+    title: "BRAND NIKE",
     description: "COMPLETE BRAND IDENTITY DESIGN INCLUDING LOGO, COLOR PALETTE, AND TYPOGRAPHY.",
     image: "/placeholder.svg?height=600&width=800",
     category: "BRANDING",
   },
   {
     id: 2,
-    title: "UI/UX DESIGN",
-    description: "USER INTERFACE AND EXPERIENCE DESIGN FOR A MOBILE APPLICATION.",
+    title: "BRAND BURGER KING",
+    description: "COMPLETE BRAND IDENTITY DESIGN INCLUDING LOGO, COLOR PALETTE, AND TYPOGRAPHY.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "UI/UX",
+    category: "BRANDING",
   },
   {
     id: 3,
-    title: "SOCIAL MEDIA GRAPHICS",
-    description: "EYE-CATCHING SOCIAL MEDIA GRAPHICS AND TEMPLATES FOR MARKETING CAMPAIGNS.",
+    title: "POSTER DESIGN",
+    description: "CREATING DYNAMIC AND IMPACTFUL POSTERS CELEBRATING THE LEGEND OF CRISTIANO RONALDO.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "SOCIAL MEDIA",
+    category: "PRINT",
   },
   {
     id: 4,
     title: "POSTER DESIGN",
-    description: "CREATIVE POSTER DESIGN FOR EVENTS AND PROMOTIONAL CAMPAIGNS.",
+    description: "DESIGNING ENERGETIC AND INSPIRATIONAL POSTERS HIGHLIGHTING THE LEGACY OF STEPHEN CURRY.",
     image: "/placeholder.svg?height=600&width=800",
     category: "PRINT",
   },
   {
     id: 5,
     title: "ILLUSTRATION",
-    description: "CUSTOM DIGITAL ILLUSTRATIONS FOR VARIOUS PROJECTS AND PUBLICATIONS.",
+    description: "CREATING CUSTOM DIGITAL ILLUSTRATIONS TO CELEBRATE GANESH CHATURTHI, A JOYOUS INDIAN FESTIVAL.",
     image: "/placeholder.svg?height=600&width=800",
     category: "ILLUSTRATION",
   },
   {
     id: 6,
-    title: "PACKAGING DESIGN",
-    description: "PRODUCT PACKAGING DESIGN WITH ATTENTION TO DETAIL AND BRAND CONSISTENCY.",
+    title: "YOUTUBE THUMBNAIL DESIGN",
+    description:
+      "CREATING EYE-CATCHING YOUTUBE THUMBNAIL DESIGNS THAT CAPTURE THE ESSENCE OF THE VIDEO, WITH A FOCUS ON ENGAGEMENT AND VISUAL APPEAL.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "PACKAGING",
+    category: "YOUTUBE THUMBNAIL",
   },
 ]
 
