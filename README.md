@@ -8,7 +8,7 @@ Welcome to the official team portfolio of **Team.exe** – a collaborative space
 
 Our journey kicked off in the lively halls of our college, where four eager tech enthusiasts crossed paths during our second year of B.Tech in Computer Science. Each of us brought our own unique flair to the table, and together, we formed a team that thrives on creativity, collaboration, and a shared drive to make a difference.
 
-### 💡 Anmol
+### 🌐 Anmol
 > A passionate full stack developer, Anmol seamlessly bridges the gap between front-end flair and back-end logic. Whether it’s designing sleek user interfaces or optimizing server-side functionality, he brings complete solutions to the table. With a love for clean code and scalable systems, he’s always ready to tackle the next big build.
 
 - [GitHub](https://github.com/ANMOLJENA)  
@@ -16,14 +16,14 @@ Our journey kicked off in the lively halls of our college, where four eager tech
 
 ---
 
-### 🌐 Shwati
+### 💡 Shwati
 > A creative UI/UX designer, Shwati blends aesthetics with usability to craft intuitive and engaging digital experiences. With a user-first mindset and a strong foundation in design principles, she transforms ideas into visually stunning and functional interfaces. Her attention to detail ensures every interaction feels natural and delightful.
 
 - [LinkedIn](https://www.linkedin.com/in/shwati-khilar-019476344/)
 
 ---
 
-### 🧠 Raman
+### 📡 Raman
 > A backend developer with a passion for IoT, Raman builds the invisible engines that power our applications. From designing efficient APIs to managing databases and server logic, he ensures everything runs smoothly behind the scenes. His interest in IoT adds a unique edge, allowing him to integrate smart devices and real-world data into digital solutions. Always exploring how tech can bridge the physical and virtual worlds, he’s the team’s innovation powerhouse.
 
 - [GitHub](www.github.com/ramanbuchha)  
@@ -31,7 +31,7 @@ Our journey kicked off in the lively halls of our college, where four eager tech
 
 ---
 
-### 📡 Kushaagra
+### 🧠 Kushaagra
 > Deep into the world of Python and machine learning, Raman is the data brain of the group. Always exploring new AI models and analytical methods, he adds intelligence and adaptability to our projects.
 
 - [GitHub](https://github.com/maskedgojo)  
