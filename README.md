@@ -66,26 +66,6 @@ We chose the **8-bit retro gaming aesthetic** to reflect our shared love for cre
 
 ---
 
-## 🛠️ Getting Started
-
-Follow these steps to run the project locally:
-
-### 1. Clone the Repository
-bash
-git clone https://github.com/your-username/team-exe-portfolio.git
-cd team-exe-portfolio
-### 2. Install Dependencies
-bash
-Copy
-Edit
-npm install
-### 3. Start the Development Server
-bash
-Copy
-Edit
-npm run dev
-Open https://v0-new-project-llwntvcrzxg.vercel.app/ in your browser to view the website.
-
 ## 🖼️ Assets and Attributions
 Tech Stack Icons & Graphics: All icons and images used (such as logos of React, TypeScript, etc.) are sourced from Google Images and used only for educational and illustrative purposes.
 
