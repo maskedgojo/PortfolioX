@@ -126,25 +126,51 @@ const AboutSection = () => {
           <div className={`${isVisible ? "pixel-slide-in" : "opacity-0"} delay-300`}>
             <div className="pixel-card h-full">
               <h3 className="pixel-subheading mb-6">OUR STORY</h3>
-              <div className="space-y-4 text-sm">
-                <p className="font-sans">
-                  WE ARE A DYNAMIC TEAM OF DEVELOPERS PASSIONATE ABOUT TECHNOLOGY AND INNOVATION. OUR COMBINED EXPERTISE
-                  SPANS TECHNICAL AND NON-TECHNICAL DOMAINS, MAKING US VERSATILE PROBLEM SOLVERS.
+              <div className="space-y-4 text-sm max-h-[500px] md:max-h-[600px] overflow-y-auto pr-2">
+                <p>
+                  Our journey kicked off in the lively halls of our college, where four eager tech enthusiasts crossed
+                  paths during our second year of B.Tech in Computer Science. Each of us brought our own unique flair to
+                  the table: one of us was a whiz with C and Java, another had a knack for web development with HTML,
+                  CSS, and JavaScript, while the third was diving headfirst into Python and machine learning. And let's
+                  not forget our fourth member, who had a passion for IoT and data analytics, adding a fresh twist to
+                  our group dynamic.
                 </p>
-                <p className="font-sans">
-                  WE HAVE EXPERIENCE IN DATA STRUCTURES, OPERATING SYSTEMS, OBJECT-ORIENTED PROGRAMMING, AND DATABASE
-                  MANAGEMENT SYSTEMS. OUR TEAM ALSO EXCELS IN LEADERSHIP, PUBLIC SPEAKING, CONTENT WRITING, TEAM
-                  MANAGEMENT, AND COMMUNICATION.
+                <p>
+                  As we teamed up on various projects, it quickly became clear that our diverse skills were like pieces
+                  of a puzzle that fit together perfectly. Our late-night brainstorming sessions turned into a fun
+                  playground of ideas, where we dreamed up everything from sleek web applications to innovative smart
+                  systems. With every chat, our bond grew stronger, and we found ourselves not just as teammates but as
+                  friends.
                 </p>
-                <p className="font-sans">
-                  TOGETHER, WE AIM TO DELIVER IMPACTFUL PROJECTS AND SOLUTIONS THAT SHOWCASE OUR DIVERSE SKILL SET. WE
-                  BELIEVE IN CONTINUOUS LEARNING AND PUSHING THE BOUNDARIES OF WHAT'S POSSIBLE WITH TECHNOLOGY.
+                <p>
+                  But our journey wasn't just about technology. We also dedicated time to community service, believing
+                  in the importance of giving back and making a positive impact. Whether it was organizing workshops for
+                  local schools or participating in environmental clean-up drives, we found joy in connecting with our
+                  community and using our skills for a greater good.
+                </p>
+                <p>
+                  In addition to our tech pursuits, we discovered a shared love for video editing. We spent countless
+                  hours creating engaging content, from project showcases to fun vlogs that captured our adventures.
+                  This creative outlet allowed us to express ourselves and share our journey with others in a visually
+                  appealing way.
+                </p>
+                <p>
+                  And let's not forget our budding public speaking skills! We took every opportunity to present our
+                  projects and ideas, honing our ability to communicate effectively and inspire others. Whether it was
+                  pitching at hackathons or speaking at college events, we embraced the chance to share our passion for
+                  technology and community service.
+                </p>
+                <p>
+                  Together, we're more than just a group of students; we're a team fueled by passion and curiosity,
+                  excited to explore the endless possibilities of technology while making a difference in the world
+                  around us. As we continue this journey, we can't wait to craft solutions that inspire and uplift our
+                  community!
                 </p>
               </div>
 
               {/* Health bar */}
               <div className="mt-6">
-                <div className="text-xs mb-1 font-pixel">TEAM POWER</div>
+                <div className="text-xs mb-1">TEAM POWER</div>
                 <div className="w-full h-4 bg-black border-2 border-white">
                   <div className="h-full bg-game-primary" style={{ width: "85%" }}></div>
                 </div>
@@ -206,8 +232,8 @@ const AboutSection = () => {
                         }}
                       >
                         <div className="pixel-card text-right">
-                          <div className="text-game-primary font-bold mb-1 font-pixel">{event.year}</div>
-                          <h4 className="text-sm font-bold mb-2 font-pixel">{event.title}</h4>
+                          <div className="text-game-primary font-bold mb-1">{event.year}</div>
+                          <h4 className="text-sm font-bold mb-2">{event.title}</h4>
                           {event.image && (
                             <div className="mb-3">
                               <Image
@@ -219,7 +245,7 @@ const AboutSection = () => {
                               />
                             </div>
                           )}
-                          <p className="text-xs font-sans">{event.description}</p>
+                          <p className="text-xs">{event.description}</p>
                         </div>
                       </div>
 
@@ -253,8 +279,8 @@ const AboutSection = () => {
                         }}
                       >
                         <div className="pixel-card">
-                          <div className="text-game-primary font-bold mb-1 font-pixel">{event.year}</div>
-                          <h4 className="text-sm font-bold mb-2 font-pixel">{event.title}</h4>
+                          <div className="text-game-primary font-bold mb-1">{event.year}</div>
+                          <h4 className="text-sm font-bold mb-2">{event.title}</h4>
                           {event.image && (
                             <div className="mb-3">
                               <Image
@@ -266,7 +292,7 @@ const AboutSection = () => {
                               />
                             </div>
                           )}
-                          <p className="text-xs font-sans">{event.description}</p>
+                          <p className="text-xs">{event.description}</p>
                         </div>
                       </div>
                     </div>

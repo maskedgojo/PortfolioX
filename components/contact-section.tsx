@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react"
+import type React from "react"
+import { useState, useEffect, useRef } from "react"
 import { Mail, Phone, User, Send } from "lucide-react"
 
 const ContactSection = () => {
@@ -22,21 +23,23 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  
+
   // Animation states
   const [fireIntensity, setFireIntensity] = useState(3)
   const [showShooting, setShowShooting] = useState(false)
-  
+
   const sectionRef = useRef<HTMLElement>(null)
   const requestRef = useRef<number>()
-  const starPositions = useRef(Array.from({ length: 30 }, () => ({
-    x: Math.random() * 100,
-    y: Math.random() * 60,
-    size: Math.random() * 0.5 + 0.5,
-    twinkleSpeed: Math.random() * 3 + 2,
-    twinkleDelay: Math.random() * 2,
-    opacity: Math.random() * 0.7 + 0.3,
-  })))
+  const starPositions = useRef(
+    Array.from({ length: 30 }, () => ({
+      x: Math.random() * 100,
+      y: Math.random() * 60,
+      size: Math.random() * 0.5 + 0.5,
+      twinkleSpeed: Math.random() * 3 + 2,
+      twinkleDelay: Math.random() * 2,
+      opacity: Math.random() * 0.7 + 0.3,
+    })),
+  )
 
   // Visibility observer for animations
   useEffect(() => {
@@ -60,38 +63,38 @@ const ContactSection = () => {
       }
     }
   }, [])
-  
+
   // Set up random shooting stars
   useEffect(() => {
     const showRandomStar = () => {
       setShowShooting(true)
       setTimeout(() => setShowShooting(false), 1000)
-      
+
       // Set next random star
       const randomDelay = Math.random() * 8000 + 4000
       setTimeout(showRandomStar, randomDelay)
     }
-    
+
     // Start the sequence
     const initialDelay = Math.random() * 3000 + 2000
     const timerId = setTimeout(showRandomStar, initialDelay)
-    
+
     return () => clearTimeout(timerId)
   }, [])
-  
+
   // Fire animation effect
   useEffect(() => {
     // Random fire intensity change
     const fireAnimation = () => {
       const randomChange = (Math.random() - 0.5) * 0.5
-      setFireIntensity(prev => {
+      setFireIntensity((prev) => {
         const newValue = prev + randomChange
         return Math.max(2.5, Math.min(4, newValue))
       })
     }
-    
+
     const fireAnimationInterval = setInterval(fireAnimation, 200)
-    
+
     return () => clearInterval(fireAnimationInterval)
   }, [])
 
@@ -171,7 +174,7 @@ const ContactSection = () => {
     // Reset success message after 5 seconds
     setTimeout(() => setIsSuccess(false), 5000)
   }
-  
+
   // Function to handle fire interaction
   const handleFireClick = () => {
     // Boost fire intensity temporarily
@@ -183,12 +186,12 @@ const ContactSection = () => {
     <section id="contact" ref={sectionRef} className="py-20 relative overflow-hidden bg-game-bg">
       {/* Background gradient for night sky effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0028] to-[#1a0b4a] z-0"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl pixel-heading mb-4 font-pixel">CONTACT US</h2>
           <div className="w-16 h-2 bg-game-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-sm font-pixel">
+          <p className="max-w-3xl mx-auto text-sm">
             HAVE A QUESTION OR WANT TO WORK WITH US? FILL OUT THE FORM BELOW AND WE'LL GET BACK TO YOU AS SOON AS
             POSSIBLE.
           </p>
@@ -203,7 +206,7 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 gap-6">
                     <div>
-                      <label className="block text-xs mb-2 font-pixel">NAME</label>
+                      <label className="block text-xs mb-2">NAME</label>
                       <div className="relative">
                         <User className="absolute left-3 top-3 h-4 w-4 text-game-text/50" />
                         <input
@@ -219,7 +222,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs mb-2 font-pixel">EMAIL</label>
+                      <label className="block text-xs mb-2">EMAIL</label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-3 h-4 w-4 text-game-text/50" />
                         <input
@@ -235,7 +238,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs mb-2 font-pixel">PHONE NUMBER</label>
+                      <label className="block text-xs mb-2">PHONE NUMBER</label>
                       <div className="relative">
                         <Phone className="absolute left-3 top-3 h-4 w-4 text-game-text/50" />
                         <input
@@ -251,7 +254,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs mb-2 font-pixel">PURPOSE</label>
+                      <label className="block text-xs mb-2">PURPOSE</label>
                       <select
                         name="purpose"
                         value={formData.purpose}
@@ -268,7 +271,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs mb-2 font-pixel">MESSAGE</label>
+                      <label className="block text-xs mb-2">MESSAGE</label>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -282,7 +285,7 @@ const ContactSection = () => {
                   </div>
 
                   <div className="flex justify-center">
-                    <button type="submit" disabled={isSubmitting} className="pixel-btn font-pixel">
+                    <button type="submit" disabled={isSubmitting} className="pixel-btn">
                       {isSubmitting ? (
                         <span className="flex items-center">SENDING...</span>
                       ) : (
@@ -304,12 +307,12 @@ const ContactSection = () => {
             </div>
 
             {/* Interactive Forest Scene */}
-            <div 
+            <div
               className={`w-full md:w-1/2 h-[500px] relative rounded-lg overflow-hidden ${isVisible ? "pixel-fade-in delay-300" : "opacity-0"}`}
             >
               {/* Night sky background */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#0a0028] to-[#1a124a]"></div>
-              
+
               {/* Moon */}
               <div
                 className="absolute w-24 h-24 rounded-full bg-[#f8f8d9]"
@@ -323,7 +326,7 @@ const ContactSection = () => {
                 <div className="absolute w-6 h-6 rounded-full bg-[#e8e8c9] top-10 right-6"></div>
                 <div className="absolute w-3 h-3 rounded-full bg-[#e8e8c9] bottom-8 left-10"></div>
               </div>
-              
+
               {/* Stars */}
               {starPositions.current.map((star, i) => (
                 <div
@@ -339,31 +342,31 @@ const ContactSection = () => {
                   }}
                 ></div>
               ))}
-              
+
               {/* Shooting star (appears randomly) */}
               {showShooting && (
-                <div 
+                <div
                   className="absolute bg-white w-1 h-1 rounded-full"
                   style={{
-                    top: '20%',
-                    left: '70%',
-                    boxShadow: '0 0 4px 2px rgba(255, 255, 255, 0.7)',
-                    animation: 'shootingStar 1s linear forwards'
+                    top: "20%",
+                    left: "70%",
+                    boxShadow: "0 0 4px 2px rgba(255, 255, 255, 0.7)",
+                    animation: "shootingStar 1s linear forwards",
                   }}
                 ></div>
               )}
-              
+
               {/* Far background mountains */}
               <div className="absolute bottom-[40%] left-0 right-0 h-[100px]">
-                <div 
+                <div
                   className="absolute w-full h-full"
-                  style={{ 
-                    background: 'linear-gradient(to top, #2a0a4a, transparent)',
-                    clipPath: 'polygon(0% 100%, 20% 40%, 35% 60%, 55% 20%, 75% 50%, 100% 10%, 100% 100%)'
+                  style={{
+                    background: "linear-gradient(to top, #2a0a4a, transparent)",
+                    clipPath: "polygon(0% 100%, 20% 40%, 35% 60%, 55% 20%, 75% 50%, 100% 10%, 100% 100%)",
                   }}
                 ></div>
               </div>
-              
+
               {/* Blue spruce trees */}
               {Array.from({ length: 8 }).map((_, i) => (
                 <div
@@ -394,15 +397,15 @@ const ContactSection = () => {
                   ></div>
                 </div>
               ))}
-              
+
               {/* Ground */}
               <div className="absolute bottom-0 left-0 right-0 h-[25%] bg-[#2a0a4a]"></div>
-              
+
               {/* Foreground dirt */}
               <div className="absolute bottom-0 left-0 right-0 h-[30px] bg-[#4a1a6a] z-30"></div>
-              
+
               {/* Interactive campfire - clickable */}
-              <div 
+              <div
                 className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 z-40 cursor-pointer"
                 onClick={handleFireClick}
               >
@@ -410,7 +413,7 @@ const ContactSection = () => {
                 <div className="w-16 h-4 bg-[#5a3a2a] rounded-full"></div>
                 <div className="w-4 h-12 bg-[#5a3a2a] absolute bottom-0 left-3 transform rotate-45"></div>
                 <div className="w-4 h-10 bg-[#5a3a2a] absolute bottom-0 right-3 transform -rotate-45"></div>
-                
+
                 {/* Fire embers - small particles floating up */}
                 {Array.from({ length: 8 }).map((_, i) => (
                   <div
@@ -424,7 +427,7 @@ const ContactSection = () => {
                     }}
                   ></div>
                 ))}
-                
+
                 {/* Fire */}
                 <div
                   className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-10 h-16"
@@ -433,21 +436,22 @@ const ContactSection = () => {
                     clipPath: "polygon(50% 0%, 25% 50%, 0% 100%, 100% 100%, 75% 50%)",
                     animation: "fire 0.5s infinite alternate",
                     filter: `brightness(${fireIntensity})`,
-                    transition: "filter 0.2s ease"
+                    transition: "filter 0.2s ease",
                   }}
                 ></div>
-                
+
                 {/* Light glow */}
                 <div
                   className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-48 rounded-full"
                   style={{
-                    background: "radial-gradient(circle, rgba(255,204,0,0.3) 0%, rgba(255,69,0,0.1) 40%, rgba(255,69,0,0) 70%)",
+                    background:
+                      "radial-gradient(circle, rgba(255,204,0,0.3) 0%, rgba(255,69,0,0.1) 40%, rgba(255,69,0,0) 70%)",
                     filter: `brightness(${fireIntensity * 0.8})`,
-                    transition: "filter 0.2s ease"
+                    transition: "filter 0.2s ease",
                   }}
                 ></div>
               </div>
-              
+
               {/* Character */}
               <div className="absolute bottom-[40px] left-[30%] z-30">
                 <div className="w-12 h-12 bg-[#3a5a8a] rounded"></div>
@@ -456,7 +460,7 @@ const ContactSection = () => {
                 <div className="w-2 h-2 bg-[#000] absolute top-4 left-3 rounded-full"></div>
                 <div className="w-2 h-2 bg-[#000] absolute top-4 right-3 rounded-full"></div>
               </div>
-              
+
               {/* Companion creature */}
               <div className="absolute bottom-[35px] right-[30%] z-30">
                 <div className="w-10 h-8 bg-[#8a3a2a] rounded-lg"></div>
@@ -466,21 +470,24 @@ const ContactSection = () => {
                 <div className="w-1 h-1 bg-[#000] absolute -top-2 left-2 rounded-full"></div>
                 <div className="w-1 h-1 bg-[#000] absolute -top-2 right-2 rounded-full"></div>
               </div>
-              
+
               {/* Help text for interaction */}
-              <div className="absolute bottom-4 left-0 right-0 text-center text-white text-xs font-pixel animate-pulse">
-                <p>CLICK THE FIRE</p>
-              </div>
-              
+              <p className="bottom-4 left-0 right-0 text-center text-white text-xs animate-pulse">CLICK THE FIRE</p>
+
               {/* Castle silhouette in background */}
               <div className="absolute bottom-[42%] left-[10%] h-[80px] w-[60px] bg-[#0a0028]">
-                <div className="absolute w-full h-[20px] bottom-full bg-[#0a0028]"
-                     style={{ clipPath: 'polygon(0 0, 20% 0, 20% 100%, 40% 0, 40% 100%, 60% 0, 60% 100%, 80% 0, 80% 100%, 100% 0, 100% 100%, 0 100%)' }}>
-                </div>
+                <div
+                  className="absolute w-full h-[20px] bottom-full bg-[#0a0028]"
+                  style={{
+                    clipPath:
+                      "polygon(0 0, 20% 0, 20% 100%, 40% 0, 40% 100%, 60% 0, 60% 100%, 80% 0, 80% 100%, 100% 0, 100% 100%, 0 100%)",
+                  }}
+                ></div>
                 <div className="absolute top-[10px] right-[-30px] w-[30px] h-[50px] bg-[#0a0028]">
-                  <div className="absolute w-full h-[15px] bottom-full bg-[#0a0028]"
-                       style={{ clipPath: 'polygon(0 0, 33% 0, 33% 100%, 66% 0, 66% 100%, 100% 0, 100% 100%, 0 100%)' }}>
-                  </div>
+                  <div
+                    className="absolute w-full h-[15px] bottom-full bg-[#0a0028]"
+                    style={{ clipPath: "polygon(0 0, 33% 0, 33% 100%, 66% 0, 66% 100%, 100% 0, 100% 100%, 0 100%)" }}
+                  ></div>
                 </div>
                 <div className="absolute w-[10px] h-[20px] bottom-[10px] left-[10px] bg-[#ffec8a] opacity-40"></div>
                 <div className="absolute w-[10px] h-[10px] bottom-[30px] right-[15px] bg-[#ffec8a] opacity-40"></div>
@@ -489,7 +496,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      
+
       {/* CSS for animations */}
       <style jsx>{`
         @keyframes twinkle {
@@ -508,7 +515,7 @@ const ContactSection = () => {
             opacity: 1;
           }
           100% { 
-            transform: translate(${Math.random() > 0.5 ? '-' : ''}${Math.random() * 20 + 10}px, -40px);
+            transform: translate(${Math.random() > 0.5 ? "-" : ""}${Math.random() * 20 + 10}px, -40px);
             opacity: 0;
           }
         }

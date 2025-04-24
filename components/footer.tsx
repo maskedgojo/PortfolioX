@@ -55,7 +55,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl neon-text mb-4 font-pixel">TEAM.EXE</h3>
+            <h3 className="text-xl neon-text mb-4">TEAM.EXE</h3>
             <p className="mb-4 text-sm text-game-text/70">
               A DYNAMIC TEAM OF DEVELOPERS PASSIONATE ABOUT TECHNOLOGY AND INNOVATION.
             </p>
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-sm neon-text-secondary mb-4 font-pixel">QUICK LINKS</h3>
+            <h3 className="text-sm neon-text-secondary mb-4">QUICK LINKS</h3>
             <ul className="space-y-2 text-xs grid grid-cols-2">
               {footerLinks.map((link, index) => (
                 <li key={index} className="mb-2">
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-sm neon-text-accent mb-4 font-pixel">CONTACT INFO</h3>
+            <h3 className="text-sm neon-text-accent mb-4">CONTACT INFO</h3>
             <ul className="space-y-2 text-xs">
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-game-primary" />
@@ -119,7 +119,7 @@ const Footer = () => {
 
         <div className="border-t-2 border-game-muted pt-8 text-center">
           <p className="text-xs text-game-text/50">&copy; {currentYear} TEAM.EXE - ALL RIGHTS RESERVED</p>
-          <div className="mt-2 text-xs text-game-text/30 pixel-blink font-pixel">PRESS START TO CONTINUE</div>
+          <div className="mt-2 text-xs text-game-text/30 pixel-blink">PRESS START TO CONTINUE</div>
         </div>
       </div>
     </footer>

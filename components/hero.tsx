@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("")
-  const fullText = "WELCOME TO OUR RETRO GAMING PORTFOLIO"
+  const fullText = "WELCOME TO THE WORLD OF US"
   const [showCursor, setShowCursor] = useState(true)
   const [isTypingComplete, setIsTypingComplete] = useState(false)
 
@@ -66,13 +66,15 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="hero-subtitle mb-8 max-w-3xl mx-auto">
-          WE ARE A TEAM OF DEVELOPERS PASSIONATE ABOUT TECHNOLOGY AND INNOVATION.
+        <p className="hero-subtitle mb-8 max-w-3xl mx-auto text-xs sm:text-sm">
+          JUST LIKE EVERY GREAT CO-OP GAME, WE'RE BETTER TOGETHER. FROM PIXELS TO PROJECTS, OUR TEAM BLENDS CREATIVITY,
+          CODE, AND CHAOS TO CRAFT MEMORABLE DIGITAL EXPERIENCES. SCROLL ON TO MEET THE SQUAD, EXPLORE OUR JOURNEY, AND
+          DIVE INTO THE ADVENTURES WE'VE CREATED—TOGETHER. GAME ON.
         </p>
 
         <div className={`${isTypingComplete ? "pixel-fade-in" : "opacity-0"}`}>
           <Link href="#about" className="pixel-btn">
-            START GAME
+            GAME ON
           </Link>
         </div>
 

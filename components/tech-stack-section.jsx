@@ -50,7 +50,7 @@ const TechStackSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">TECH INVENTORY</h2>
           <div className="w-16 h-2 bg-game-primary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-sm font-sans">OUR ARSENAL OF TECHNOLOGIES AND TOOLS</p>
+          <p className="max-w-3xl mx-auto text-sm">OUR ARSENAL OF TECHNOLOGIES AND TOOLS</p>
         </div>
 
         <div className="space-y-16">
@@ -70,7 +70,7 @@ const TechStackSection = () => {
                           className="object-contain"
                         />
                       </div>
-                      <span className="text-xs text-center font-sans">{tech.name}</span>
+                      <span className="text-xs text-center">{tech.name}</span>
                     </div>
                   </div>
                 ))}

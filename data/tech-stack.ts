@@ -2,17 +2,17 @@ export const categorizedTechStack = {
   FRONTEND: [
     {
       name: "HTML5",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/html5.webp",
       color: "#E34F26",
     },
     {
       name: "CSS3",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/css3.png",
       color: "#1572B6",
     },
     {
       name: "JavaScript",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/javascript.webp",
       color: "#F7DF1E",
     },
     {
@@ -44,7 +44,7 @@ export const categorizedTechStack = {
     },
     {
       name: "Java",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/java.png",
       color: "#007396",
     },
     {
@@ -56,12 +56,12 @@ export const categorizedTechStack = {
   DATABASE: [
     {
       name: "MySQL",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/mysql.png",
       color: "#4479A1",
     },
     {
       name: "MongoDB",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/mongodb.png",
       color: "#47A248",
     },
     {
@@ -71,7 +71,7 @@ export const categorizedTechStack = {
     },
     {
       name: "Firebase",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/firebase.png",
       color: "#FFCA28",
     },
     {
@@ -83,23 +83,18 @@ export const categorizedTechStack = {
   "TOOLS & DEVOPS": [
     {
       name: "Git",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/git.png",
       color: "#F05032",
     },
     {
       name: "Docker",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/docker.jpeg",
       color: "#2496ED",
     },
     {
       name: "AWS",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/aws.webp",
       color: "#FF9900",
-    },
-    {
-      name: "CI/CD",
-      icon: "/placeholder.svg?height=80&width=80",
-      color: "#4285F4",
     },
     {
       name: "VS Code",

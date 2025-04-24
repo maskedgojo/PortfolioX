@@ -7,58 +7,53 @@ import Image from "next/image"
 const projects = [
   {
     id: 1,
-    title: "E-COMMERCE PLATFORM",
-    description: "A FULL-STACK E-COMMERCE PLATFORM WITH USER AUTHENTICATION, PRODUCT CATALOG, AND PAYMENT INTEGRATION.",
+    title: "ECOTRAFFIC-AI-DELHI-HACKATHON",
+    description: "EcoTraffic AI is an AI-powered smart system designed to optimize traffic flow and reduce pollution levels in Delhi through real-time data analysis and adaptive signal control.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["REACT", "NODE.JS", "MONGODB"],
+    githubUrl: "https://github.com/maskedgojo/Ecotraffic-AI---Delhi-Hackthon",
+    liveUrl: "v0-delhi-hackthon.vercel.app/",
+    tags: ["TYPESCRIPT", "CSS", "JAVASCRIPT"],
   },
   {
     id: 2,
-    title: "TASK MANAGEMENT APP",
-    description: "A COLLABORATIVE TASK MANAGEMENT APPLICATION WITH REAL-TIME UPDATES AND TEAM COLLABORATION FEATURES.",
+    title: "PACMAN",
+    description: "A classic arcade-style Pacman Game where players navigate mazes, eat pellets, and evade ghosts for high scores and endless fun.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["REACT", "FIREBASE", "TAILWIND"],
+    githubUrl: "https://github.com/maskedgojo/Pacman",
+    tags: ["JAVA"],
   },
   {
     id: 3,
-    title: "PORTFOLIO WEBSITE",
-    description: "A RESPONSIVE PORTFOLIO WEBSITE BUILT WITH REACT AND NEXT.JS TO SHOWCASE PROJECTS AND SKILLS.",
+    title: "MOVIE-RECOMMENDER-SYSTEM",
+    description: "An intelligent Movie Recommender System that suggests personalized films using machine learning and vectorization based on user preferences.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["NEXT.JS", "FRAMER", "TAILWIND"],
+    githubUrl: "https://github.com/maskedgojo/MOVIE-RECOMMENDER-SYSTEM",
+    tags: ["PYTHON"],
   },
   {
     id: 4,
-    title: "WEATHER DASHBOARD",
-    description: "A WEATHER DASHBOARD THAT DISPLAYS CURRENT AND FORECASTED WEATHER DATA USING A THIRD-PARTY API.",
+    title: "MEMORY CARD GAME",
+    description: "A fun and interactive Memory Card Game where players match pairs of cards using concentration and visual recall skills.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["REACT", "API", "CHART.JS"],
+    githubUrl: "https://github.com/maskedgojo/Memory-cards-game",
+    tags: ["JAVA"],
   },
   {
     id: 5,
-    title: "SOCIAL MEDIA APP",
-    description: "A SOCIAL MEDIA APPLICATION WITH USER PROFILES, POSTS, COMMENTS, AND REAL-TIME NOTIFICATIONS.",
+    title: "CALCULATOR",
+    description: "A simple and efficient Calculator app for performing basic arithmetic operations with a clean and user-friendly interface.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["REACT NATIVE", "FIREBASE", "REDUX"],
+    githubUrl: "https://github.com/ANMOLJENA/calculator-project",
+    tags: ["CSS", "JAVASCRIPT", "HTML"],
   },
   {
     id: 6,
-    title: "RECIPE FINDER",
+    title: "NETFLIX CLONE",
     description:
-      "A RECIPE FINDER APPLICATION THAT ALLOWS USERS TO SEARCH FOR RECIPES BASED ON INGREDIENTS AND DIETARY RESTRICTIONS.",
+      "A static Netflix Clone built with only HTML and CSS, replicating the visual layout and design of the original platform.",
     image: "/placeholder.svg?height=600&width=800",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    tags: ["JAVASCRIPT", "API", "CSS GRID"],
+    githubUrl: "https://github.com/maskedgojo/Netflix-Clone",
+    tags: ["HTML", "CSS"],
   },
 ]
 
@@ -153,15 +148,6 @@ const ProjectsSection = () => {
                   >
                     <Github className="h-4 w-4 mr-1" />
                     GITHUB
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-xs hover:neon-text transition-all duration-300"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-1" />
-                    DEMO
                   </a>
                 </div>
               </div>
