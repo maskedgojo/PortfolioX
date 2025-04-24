@@ -7,7 +7,7 @@ export const categorizedTechStack = {
     },
     {
       name: "CSS3",
-      icon: "/images/css3.png",
+      icon: "/images/css3.png?height=80&width=80",
       color: "#1572B6",
     },
     {
@@ -17,12 +17,12 @@ export const categorizedTechStack = {
     },
     {
       name: "React",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/React.png",
       color: "#61DAFB",
     },
     {
       name: "Tailwind CSS",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/tailwind css.png",
       color: "#38B2AC",
     },
   ],
@@ -39,17 +39,17 @@ export const categorizedTechStack = {
     },
     {
       name: "Python",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/python.png",
       color: "#3776AB",
     },
     {
       name: "Java",
-      icon: "/images/java.png",
+      icon: "/images/java.png?height=80&width=80",
       color: "#007396",
     },
     {
       name: "PHP",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/php.png",
       color: "#777BB4",
     },
   ],
@@ -66,7 +66,7 @@ export const categorizedTechStack = {
     },
     {
       name: "PostgreSQL",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/postgreSQL.png",
       color: "#336791",
     },
     {
@@ -76,7 +76,7 @@ export const categorizedTechStack = {
     },
     {
       name: "Redis",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/redis.png",
       color: "#DC382D",
     },
   ],
@@ -98,7 +98,7 @@ export const categorizedTechStack = {
     },
     {
       name: "VS Code",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/vs code.png",
       color: "#007ACC",
     },
   ],
