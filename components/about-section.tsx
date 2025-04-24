@@ -18,7 +18,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Anmol clinched victory for KIIT in the inter-college basketball tournament with an outstanding performance.",
     side: "left",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/basketball?height=300&width=400",
   },
   {
     year: "2024",
@@ -26,7 +26,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Kushaagra participated in the Model United Nations, gaining valuable experience in diplomacy, public speaking, and global affairs.",
     side: "right",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/mun?height=300&width=400",
   },
   {
     year: "2024",
@@ -42,7 +42,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Kushaagra explored diabetes prediction using Near-Infrared (NIR) technology at Ideathon, contributing to innovative healthcare solutions.",
     side: "right",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/kiit hackathon?height=300&width=400",
   },
   {
     year: "2025",
@@ -50,7 +50,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Kushaagra qualified among the top 8 teams out of 700+ at the IIT Delhi Energy Hackathon, developing an AI-driven solution to tackle air pollution in Delhi-NCR..",
     side: "left",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/delhi hackathon?height=300&width=400",
   },
   {
     year: "2025",
