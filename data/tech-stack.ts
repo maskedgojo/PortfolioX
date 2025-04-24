@@ -29,12 +29,12 @@ export const categorizedTechStack = {
   BACKEND: [
     {
       name: "Node.js",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/node.jpg",
       color: "#339933",
     },
     {
       name: "Express.js",
-      icon: "/placeholder.svg?height=80&width=80",
+      icon: "/images/ex.jpg",
       color: "#000000",
     },
     {
